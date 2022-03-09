@@ -426,7 +426,7 @@ asr_train.py
                         [--normalize_conf NORMALIZE_CONF]
                         [--preencoder {sinc,linear,None}]
                         [--preencoder_conf PREENCODER_CONF]
-                        [--encoder {conformer,transformer,contextual_block_transformer,contextual_block_conformer,vgg_rnn,rnn,wav2vec2,hubert,hubert_pretrain}]
+                        [--encoder {conformer,transformer,contextual_block_transformer,contextual_block_conformer,vgg_rnn,rnn,wav2vec2,hubert,hubert_pretrain,longformer}]
                         [--encoder_conf ENCODER_CONF]
                         [--postencoder {hugging_face_transformers,None}]
                         [--postencoder_conf POSTENCODER_CONF]
@@ -800,7 +800,7 @@ asr_train.py
                             The preencoder type (default: None)
       --preencoder_conf PREENCODER_CONF
                             The keyword arguments for preencoder (default: {})
-      --encoder {conformer,transformer,contextual_block_transformer,contextual_block_conformer,vgg_rnn,rnn,wav2vec2,hubert,hubert_pretrain}
+      --encoder {conformer,transformer,contextual_block_transformer,contextual_block_conformer,vgg_rnn,rnn,wav2vec2,hubert,hubert_pretrain,longformer}
                             The encoder type (default: rnn)
       --encoder_conf ENCODER_CONF
                             The keyword arguments for encoder (default: {})
@@ -3850,7 +3850,7 @@ mt_train.py
       --input_size INPUT_SIZE
                             The number of input dimension of the feature (default: None)
       --model_conf MODEL_CONF
-                            The keyword arguments for model class. (default: {'src_vocab_size': 0, 'src_token_list': [], 'ignore_id': -1, 'lsm_weight': 0.0, 'length_normalized_loss': False, 'report_bleu': True, 'sym_space': '<space>', 'sym_blank': '<blank>', 'extract_feats_in_collect_stats': True})
+                            The keyword arguments for model class. (default: {'src_vocab_size': 0, 'src_token_list': [], 'ignore_id': -1, 'lsm_weight': 0.0, 'length_normalized_loss': False, 'report_bleu': True, 'sym_space': '<space>', 'sym_blank': '<blank>', 'extract_feats_in_collect_stats': True, 'share_decoder_input_output_embed': False, 'share_encoder_decoder_input_embed': False})
     
       Preprocess related
     
